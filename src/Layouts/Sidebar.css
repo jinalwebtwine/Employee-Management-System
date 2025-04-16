@@ -1,0 +1,69 @@
+/* Sidebar container */
+.sidebar-custom {
+  background-color: #e6e6fa; /* Lilac */
+  height: 100vh;
+  border-radius: 0 12px 12px 0;
+  position: sticky;
+  top: 0;
+  width: 50px; /* Default width (minimized state) */
+  transition: width 0.3s ease; /* Smooth transition for expanding */
+}
+
+/* On hover, expand the sidebar */
+.sidebar-custom:hover {
+  width: 200px; /* Expanded width */
+}
+
+/* Sidebar items */
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list-group-item-custom {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+  transition: background 0.3s;
+}
+
+/* Link styles */
+.nav-link-custom {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Icon and label */
+.nav-link-custom .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: margin-right 0.3s ease; /* Smooth transition for icon */
+}
+
+.nav-link-custom:hover {
+  background-color: #d8bdfc;
+  color: #000;
+}
+
+/* When sidebar is minimized, hide the text labels */
+.sidebar-custom .nav-link-custom .label {
+  display: none;
+}
+
+/* When sidebar is expanded, show the text labels */
+.sidebar-custom:hover .nav-link-custom .label {
+  display: inline-block;
+}
+
+/* Ensure icons remain centered when sidebar is minimized */
+.sidebar-custom .nav-link-custom .icon {
+  margin-right: 0;
+  justify-content: center;
+}
